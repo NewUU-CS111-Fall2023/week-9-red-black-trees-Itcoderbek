@@ -1,10 +1,10 @@
-#ifndef TASK_1_H
-#define TASK_1_H
+#ifndef TASK_2_H
+#define TASK_2_H
 class RedBlackTree {
 private:
     struct Node {
         int data;
-        char color;
+        char color; 
         Node* parent;
         Node* left;
         Node* right;
@@ -12,13 +12,14 @@ private:
     Node* root;
     void insertFixup(Node* newNode);
     void leftRotate(Node* x);
-    void rightRotate(Node* x);
+    void rightRotate(Node* y);
     void printTreeHelper(Node* root, int space);
-
 public:
     RedBlackTree();
     ~RedBlackTree();
     void Insert(int value);
     void PrintTree();
+    void leftRotate(); 
+    void rightRotate(); 
 };
 #endif 
